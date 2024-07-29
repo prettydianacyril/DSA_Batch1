@@ -1,0 +1,20 @@
+//Add Two Complex Numbers
+
+#include <stdio.h>
+typedef struct complex {
+    float real;
+    float imag;
+} complex;
+
+complex add(complex n1, complex n2);
+
+int main() {
+    complex n1, n2, result;
+
+
+
+    result = add(n1, n2);
+
+    printf("Sum = %.1f + %.1fi", result.real, result.imag);
+    return 0;
+}

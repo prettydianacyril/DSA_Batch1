@@ -1,0 +1,40 @@
+// This C Program to reverse only first N elements of a linked list.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+struct node
+{
+    int num;
+    struct node *next;
+};
+ 
+void create(struct node **);
+void reverse(struct node **, int);
+void release(struct node **);
+void display(struct node *);
+ 
+int main()
+{
+    struct node *p = NULL;
+    int n;
+ 
+    printf("Enter data into the list\n");
+    create(&p);
+    printf("Displaying the nodes in the list:\n");
+    display(p);
+    printf("Enter the number N to reverse first N node: ");
+    scanf("%d", &n);
+    printf("Reversing the list...\n");
+    if (n > 1)
+    {
+        reverse(&p, n - 2);
+    }
+    printf("Displaying the reversed list:\n");
+    display(p);
+    release(&p);
+ 
+    return 0;
+}
+ 

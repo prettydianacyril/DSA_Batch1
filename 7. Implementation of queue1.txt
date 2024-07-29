@@ -1,0 +1,34 @@
+//C program to count the number of elements in a queue.
+/*Expected Output:
+
+Initialize a queue!
+Check the queue is empty or not? Yes
+Number of elements in queue: 0
+
+Insert some elements into the queue:
+Queue elements are: 1 2 3 
+Number of elements in queue: 3
+
+Delete two elements from the said queue:
+Queue elements are: 3 
+Number of elements in queue: 1
+
+Insert another element into the queue:
+Queue elements are: 3 4 
+Number of elements in the queue: 2*/
+
+#include <stdio.h>
+#define MAX_SIZE 100
+int queue[MAX_SIZE]; 
+int front = -1; 
+int back = -1; 
+
+int count() {
+    int count = 0; 
+    if (front != -1 && back != -1) { 
+        for (int i = front; i <= back; i++) 
+            count++; 
+        }
+    }
+    return count; 
+}

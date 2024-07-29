@@ -1,0 +1,43 @@
+//C program that checks whether a string of parentheses is balanced or not using stack.
+/*Expected Output:
+
+Input an expression in parentheses: {[])
+The expression is not balanced.
+ -----------------------------------------
+ Input an expression in parentheses: ((()))
+The expression is balanced.
+ -----------------------------------------
+ Input an expression in parentheses: ())
+The expression is not balanced.
+ -----------------------------------------
+ Input an text of parentheses: ([]){}[[(){}]{}]
+The expression is balanced.
+ -----------------------------------------
+ Input an expression in parentheses: [(]))
+The expression is not balanced.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_SIZE 100
+
+// Global variables for stack and top
+char stack[MAX_SIZE];
+int top = -1;
+
+
+// Main function
+int main() {
+   char text[MAX_SIZE];
+   printf("Input an expression in parentheses: ");
+   scanf("%s", text);
+
+   // Check if the expression is balanced or not
+   if (isBalanced(text)) {
+       printf("The expression is balanced.\n");
+   } else {
+       printf("The expression is not balanced.\n");
+   }
+   return 0;
+}

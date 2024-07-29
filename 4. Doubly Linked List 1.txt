@@ -1,0 +1,31 @@
+// C Program to Find the Largest Element in a Doubly Linked List
+
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+struct node
+{
+    int num;
+    struct node *next;
+    struct node *prev;
+};
+ 
+void create(struct node **);
+int max(struct node *);
+void release(struct node **);
+ 
+int main()
+{
+    struct node *p = NULL;
+    int n;
+ 
+    printf("Enter data into the list\n");
+    create(&p);
+    n = max(p);
+    printf("The maximum number entered in the list is %d.\n", n);
+    release (&p);
+ 
+    return 0;
+}
+ 

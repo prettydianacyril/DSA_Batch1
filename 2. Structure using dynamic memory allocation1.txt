@@ -1,0 +1,24 @@
+//This program asks the user to store the value of noOfRecords and allocates the memory for the noOfRecords structure variables dynamically using the malloc() function.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+struct course {
+  int marks;
+  char subject[30];
+};
+
+int main() {
+ 
+
+
+  printf("Displaying Information:\n");
+  for (int i = 0; i < noOfRecords; ++i) {
+    printf("%s\t%d\n", (ptr + i)->subject, (ptr + i)->marks);
+  }
+
+  free(ptr);
+
+  return 0;
+}
